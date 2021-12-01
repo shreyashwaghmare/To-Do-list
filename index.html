@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To--Do</title>
+    <style>
+        body{
+            background-color: rgb(231, 235, 177);
+        }
+        #main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 10px 50px;
+            padding: 10px;
+            border: 2px solid rgb(247, 176, 176);
+            height: 100vh;
+        }
+        #container2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+        }
+        #deltask{
+            background-color: darkred;
+            height: 20px;
+            width: 50px;
+            text-align: center;
+            padding: 2px;
+            border: 2px solid black;
+            margin: 5px;
+            color: white;
+            font-weight: bold;
+
+        }
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        button:hover{
+           color: rgb(138, 141, 132);
+          
+           
+        }
+        button{
+            margin: 2px;
+            padding: 1px;
+            border: 2px solid black;
+            height: 30px;
+            width: 100px;
+            border-radius: 5px ;
+            color: rgb(36, 53, 4);
+            font-weight: bold;
+        }
+        #task{
+            height: 20px;
+            width: 200px;
+            background-color: darksalmon;
+        }
+        p{
+            text-align: center;
+            font-style:oblique ;
+            font-size: large;
+            margin: 5px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            font-weight: bolder;
+            border: 2px dashed black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 style="color: darkgoldenrod;">To--Do List</h1>
+        <div id="container">
+            <input type="text" id="task" placeholder="Enter Task Here.">
+            <button id="addbtn" style="background-color: green;" onclick="add()">ADD</button>
+            <button id="delbtn" style="background-color: red;"  onclick="window.location.href='page2.html'">Exit</button>
+
+        </div>
+        <div id="container2">
+           
+
+        </div>
+
+    </div>
+    <script>
+        var count=1;
+        function del(){
+     
+     var con =  document.getElementById("container2");
+     var para= con.getElementsByTagName("p")[0];
+     para.remove();
+    
+     
+ }
+ 
+        function add(){
+             
+        var d =  document.getElementById("container2");
+        var val = document.getElementById("task");
+        var c = document.createElement("p");
+       
+        var btn = document.createElement("Button");
+        btn.innerHTML = "Delete";
+        btn.id="deltask";
+        btn.onclick = del;
+               
+        
+        if(val.value==""){
+            alert("Enter Some Task");
+            return;
+        }
+        c.innerHTML= count + ":"+" ";
+        count++;
+        c.innerHTML += val.value;
+        val.value="";
+        c.appendChild(btn);
+        d.appendChild(c);
+       // var btn =  document.getElementById("deltask");
+    
+        return;
+
+       
+       
+    }
+   
+   
+    </script>
+</body>
+</html>
