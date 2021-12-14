@@ -1,0 +1,43 @@
+body {
+    
+   
+    background-color: darkseagreen;
+   height: 100vh;
+    text-align: center;
+   
+}
+#btn{
+    background-color: green;
+    border-radius: 10%;
+    height: 25px;
+    width: 10%;
+
+}
+#input_box{
+    width:40%;
+    height: 30px;
+}
+h1{
+    color: rgb(44, 20, 44);
+    font-style: oblique;
+    font-size:  1cm;
+    text-shadow: 1px 1px rgb(212, 58, 58);
+}
+ul{
+    display: inline-block;
+   text-align: left;
+    font-weight: bolder;
+    font-size: x-large;
+   
+}
+ul li {
+   margin-bottom:2px ;
+   color: brown;
+}
+.container {
+    background-color: rgb(247, 203, 149);
+    border:  3px solid black;
+    margin: 10px 20px;
+    height: 100%;
+    padding-top: 10%;
+}
